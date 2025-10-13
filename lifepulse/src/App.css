@@ -1,0 +1,166 @@
+/* =========================
+   Base Reset & Typography
+   ========================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.5;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+h3 {
+  color: #4caf50;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   Dashboard Layout
+   ========================= */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* =========================
+   Cards
+   ========================= */
+.card {
+  border-radius: 12px;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #43a047;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   Inputs
+   ========================= */
+input, select, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9aa1a8;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+/* =========================
+   Lists (ActionList)
+   ========================= */
+ul.clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.task-item .remove-btn {
+  margin-left: auto;
+  background: transparent;
+  color: #e53935;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.task-item .remove-btn:hover {
+  background: rgba(229, 57, 53, 0.1);
+}
+
+/* =========================
+   Charts
+   ========================= */
+.chart-container {
+  height: 300px;
+  width: 100%;
+}
+
+/* =========================
+   Utility Spacing
+   ========================= */
+.mt-0 { margin-top: 0; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+
+header h2 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+header img {
+  display: block;
+}
+
+.logo {
+  max-width: 10rem;
+  height: auto;
+  border-radius: 100%;
+}
