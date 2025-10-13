@@ -25,6 +25,11 @@ export default function Dashboard() {
             padding: "20px",
           }}
         >
+      <CardVital title="Need Help?">
+        <p>Click below to learn how to use LifePulse.</p>
+          <HelpButton />
+      </CardVital>
+      
       <CardVital title="Water Intake">
         <HabitCounter habit="Water" />
         <GoalTracker habit="Water" defaultGoal={8} />
@@ -64,10 +69,7 @@ export default function Dashboard() {
         <ResetButton />
       </CardVital>
 
-      <CardVital title="Need Help?">
-        <p>Click below to learn how to use LifePulse.</p>
-          <HelpButton />
-      </CardVital>
     </div>
   );
 }
+
