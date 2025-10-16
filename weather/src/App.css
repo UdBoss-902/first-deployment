@@ -44,6 +44,7 @@ body {
   justify-content: center;
   margin-bottom: 1.5rem;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .search-input {
@@ -87,26 +88,30 @@ body {
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-bottom: 1.5rem;
+  justify-content: center;
 }
 
 .favorite-item {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.4rem 0.6rem;
+  border-radius: 10px;
 }
 
 .favorite-btn {
-  padding: 0.5rem 0.9rem;
-  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
   border: none;
-  background: rgba(255,255,255,0.2);
+  background: transparent;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .favorite-btn:hover {
-  background: rgba(255,255,255,0.35);
+  color: #93c5fd;
   transform: scale(1.05);
 }
 
@@ -186,8 +191,10 @@ body {
   margin-top: 1rem;
   overflow-x: auto;
   padding-bottom: 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.3) transparent;
+  width: 100%;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .forecast-container::-webkit-scrollbar {
@@ -204,9 +211,10 @@ body {
   padding: 1rem;
   border-radius: 14px;
   min-width: 120px;
+  flex: 0 0 auto;
   text-align: center;
-  flex-shrink: 0;
   backdrop-filter: blur(6px);
+  scroll-snap-align: start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -267,5 +275,9 @@ body {
   }
   .temp {
     font-size: 2.5rem;
+  }
+  .forecast-card {
+    min-width: 100px;
+    padding: 0.8rem;
   }
 }
